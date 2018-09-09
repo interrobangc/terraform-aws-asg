@@ -64,3 +64,8 @@ variable "wait_for_capacity_timeout" {
   description = "Time to wait for autoscale group to reach healthy state"
   default     = "10m"
 }
+
+variable "associate_public_ip_address" {
+  description = "Associate a public ip address with each instance"
+  default     = false
+}

@@ -10,13 +10,14 @@ module "asg" {
 
   enable_monitoring = "${var.enable_monitoring}"
 
-  asg_name                  = "${var.name}-asg"
-  vpc_zone_identifier       = ["${var.subnets}"]
-  health_check_type         = "EC2"
-  min_size                  = "${var.min_size}"
-  max_size                  = "${var.max_size}"
-  desired_capacity          = "${var.desired_capacity ? var.desired_capacity : var.min_size}"
-  wait_for_capacity_timeout = "${var.wait_for_capacity_timeout}"
+  asg_name                    = "${var.name}-asg"
+  vpc_zone_identifier         = ["${var.subnets}"]
+  health_check_type           = "EC2"
+  min_size                    = "${var.min_size}"
+  max_size                    = "${var.max_size}"
+  desired_capacity            = "${var.desired_capacity ? var.desired_capacity : var.min_size}"
+  wait_for_capacity_timeout   = "${var.wait_for_capacity_timeout}"
+  associate_public_ip_address = "${var.associate_public_ip_address}"
 
   target_group_arns = ["${var.target_group_arns}"]
 
