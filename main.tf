@@ -3,10 +3,11 @@ module "asg" {
 
   name = "${var.name}"
 
-  image_id        = "${var.ami}"
-  instance_type   = "${var.instance_type}"
-  key_name        = "${var.key_name}"
-  security_groups = ["${var.security_groups}"]
+  image_id             = "${var.ami}"
+  instance_type        = "${var.instance_type}"
+  key_name             = "${var.key_name}"
+  security_groups      = ["${var.security_groups}"]
+  iam_instance_profile = "${var.iam_instance_profile}"
 
   enable_monitoring = "${var.enable_monitoring}"
 

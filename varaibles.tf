@@ -69,3 +69,8 @@ variable "associate_public_ip_address" {
   description = "Associate a public ip address with each instance"
   default     = false
 }
+
+variable "iam_instance_profile" {
+  description = "The IAM instance profile to associate with launched instances"
+  default     = ""
+}
