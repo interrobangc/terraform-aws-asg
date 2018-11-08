@@ -8,9 +8,9 @@ module "asg" {
   key_name             = "${var.key_name}"
   security_groups      = ["${var.security_groups}"]
   iam_instance_profile = "${var.iam_instance_profile}"
+  enable_monitoring    = "${var.enable_monitoring}"
 
-  enable_monitoring = "${var.enable_monitoring}"
-
+  user_data                   = "${var.user_data}"
   asg_name                    = "${var.name}-asg"
   vpc_zone_identifier         = ["${var.subnets}"]
   health_check_type           = "EC2"

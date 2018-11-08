@@ -74,3 +74,8 @@ variable "iam_instance_profile" {
   description = "The IAM instance profile to associate with launched instances"
   default     = ""
 }
+
+variable "user_data" {
+  description = "The user data to provide when launching the instance"
+  default     = " "
+}
